@@ -1,3 +1,3 @@
 # RADIO STREAM APP
 
-Create and Broadcast radio streams
+Create and broadcast live internet radio streams
