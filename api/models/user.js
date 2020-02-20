@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator");
 
 function toLower(st) {
   return st.toLowerCase();
@@ -11,4 +12,4 @@ const UserSchema = new Schema({
   Date: { type: Date, default: Date.now }
 });
 
-module.exports = model("user", UserSchema);
+module.exports = model("user", UserSchema.plugin(uniqueValidator));
