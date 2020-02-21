@@ -1,7 +1,7 @@
 {
   "env": {
     "PORT": 8080,
-    "mongouri": "mongodb://localhost:27017/liveradio",
-    "jwtSecret": "gLFUhh24rtFokWf16wM7UqgGpgyQBvwwc97oUaVdO9wCzSmL3xZCeHBiCpDEEQJ"
+    "mongouri": "MONGO_URI",
+    "jwtSecret": "SECRET"
   }
 }
