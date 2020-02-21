@@ -1,8 +1,29 @@
-// User Authentication Route //
+// USER AUTH ROUTE //
 
 const router = require("express").Router();
+const passport = require("passport");
 
-router.post("/signup", (req, res, next) => {
-  const username = req.body.username;
-  const password = req.body.password;
-});
+const signup = require("../controllers/auth/signup"); // SIGN UP CONTROLLER
+const login = require("../controllers/auth/login"); // LOG IN CONTROLLER
+const current = require("../controllers/auth/current"); // LOG IN CONTROLLER
+
+// @route       POST /auth/signup
+// @desc        register new user
+// @access      public
+router.post("/signup", signup);
+
+// @route       POST /auth/login
+// @desc        login user
+// @access      public
+router.post("/login", login);
+
+// @route       GET api/auth/current
+// @desc        return authorized user
+// @access      private
+router.get(
+  "/current",
+  passport.authenticate("jwt", { session: false }),
+  current
+);
+
+module.exports = router;

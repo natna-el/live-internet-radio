@@ -8,7 +8,7 @@ function toLower(st) {
 const UserSchema = new Schema({
   username: { type: String, set: toLower, required: true, unique: true },
   password: { type: String, required: true },
-  pfp: { type: String, required: true },
+  pfp: { type: String },
   Date: { type: Date, default: Date.now }
 });
 

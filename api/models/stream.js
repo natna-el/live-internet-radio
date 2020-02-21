@@ -1,7 +1,8 @@
 const { Schema, model } = require("mongoose");
 
-const radioSchema = new Schema({
+const streamSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "user" },
+  userType: { type: Number, default: 0 },
   playlist: Array,
   listeners: Array,
   chat: {
@@ -12,4 +13,4 @@ const radioSchema = new Schema({
   Date: { type: Date, default: Date.now }
 });
 
-module.exports = model("radio", radioSchema);
+module.exports = model("stream", streamSchema);
