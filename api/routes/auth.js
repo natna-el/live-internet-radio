@@ -17,7 +17,7 @@ router.post("/signup", signup);
 // @access      public
 router.post("/login", login);
 
-// @route       GET api/auth/current
+// @route       GET auth/current
 // @desc        return authorized user
 // @access      private
 router.get(
