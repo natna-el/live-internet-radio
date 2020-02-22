@@ -2,7 +2,6 @@ const { Schema, model } = require("mongoose");
 
 const streamSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "user" },
-  userType: { type: Number, default: 0 },
   playlist: Array,
   listeners: Array,
   chat: {
