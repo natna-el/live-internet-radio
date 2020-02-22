@@ -15,9 +15,9 @@ module.exports = (req, res, next) => {
     return res.status(400).json(errors);
   }
 
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
-  User.findOne({ email }).then(user => {
+  User.findOne({ username }).then(user => {
     // check if user exist
     if (!user) {
       errors.username = "user not found";
