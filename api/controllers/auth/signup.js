@@ -32,7 +32,7 @@ module.exports = (req, res, next) => {
         .then(user => res.json({ success: true, user }))
         .catch(err => {
           if (err.errors.username && err.errors.username.kind == "unique") {
-            errors.username = "username already has been taken";
+            errors.username = "username has been already taken";
             res.status(403).json({ errors });
           } else {
             res.status(400).json(err);
