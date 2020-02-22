@@ -5,7 +5,7 @@ const passport = require("passport");
 
 const signup = require("../controllers/auth/signup"); // SIGN UP CONTROLLER
 const login = require("../controllers/auth/login"); // LOG IN CONTROLLER
-const current = require("../controllers/auth/current"); // LOG IN CONTROLLER
+const current = require("../controllers/auth/current"); // CURRENT SESSION CONTROLLER
 
 // @route       POST /auth/signup
 // @desc        register new user
