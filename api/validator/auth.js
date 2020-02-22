@@ -60,13 +60,13 @@ module.exports = {
     data.username = !isEmpty(data.username) ? data.username : "";
     data.password = !isEmpty(data.password) ? data.password : "";
 
-    // check if email & password field is empty
+    // check if username & password field is empty
 
     validator.isEmpty(data.username) &&
-      (errors.email = "Email or Username field is required");
+      (errors.username = "username field is required");
 
     validator.isEmpty(data.password) &&
-      (errors.password = "Password field is required");
+      (errors.password = "password field is required");
 
     // return errors object if the form is invalid
     return {
