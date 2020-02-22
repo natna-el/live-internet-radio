@@ -38,8 +38,7 @@ module.exports = {
     // check if password and confirm password match.
     validator.isEmpty(data.confirm_password)
       ? (errors.confirm_password = "confirm password field is required!")
-      : //
-        !validator.equals(data.password, data.confirm_password) &&
+      : !validator.equals(data.password, data.confirm_password) &&
         (errors.confirm_password = "password fields must match");
 
     // return errors object if the form is invalid
