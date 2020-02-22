@@ -7,7 +7,6 @@ const streamSchema = new Schema({
     {
       source: String,
       url: String,
-      length: { type: String },
       Date: { type: Date, default: Date.now }
     }
   ],
