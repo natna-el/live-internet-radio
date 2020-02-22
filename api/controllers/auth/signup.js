@@ -29,7 +29,9 @@ module.exports = (req, res, next) => {
       // save new user to the database
       newUser
         .save()
-        .then(user => res.json({ success: true, user }))
+        .then(user =>
+          res.json({ success: true, message: "regisration was successfull!" })
+        )
         .catch(err => {
           if (err.errors.username && err.errors.username.kind == "unique") {
             errors.username = "username has been already taken";
