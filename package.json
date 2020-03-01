@@ -1,0 +1,22 @@
+{
+  "name": "radio-stream",
+  "version": "1.0.0",
+  "description": "radio streaming web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natna-el/live-internet-radio.git"
+  },
+  "author": "Natnael Abrham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natna-el/live-internet-radio/issues"
+  },
+  "homepage": "https://github.com/natna-el/live-internet-radio#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
