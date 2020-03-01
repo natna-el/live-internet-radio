@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const passport = require("passport");
+const compression = require("compression");
 
 // init express
 const app = express();
@@ -14,6 +15,9 @@ require("./api/config/passport")(passport);
 // MIDDLEWARES //
 // morgan
 app.use(morgan("dev"));
+
+// compress all responses
+app.use(compression());
 
 // body-parser
 app.use(express.urlencoded({ extended: true }));

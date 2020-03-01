@@ -19,6 +19,7 @@
   "homepage": "https://github.com/natna-el/radio-station#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.1",
